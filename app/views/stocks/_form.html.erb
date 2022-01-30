@@ -1,0 +1,8 @@
+<%= form_with url: "/load-stock", method: :post do |form| %>
+  <%= form.label :name, "Select one or multiple symbols:" %>
+     <%= form.select(:name, @stock_symbols.collect {|p| [ p.name, p.name ] }, 
+                                           { :prompt => ""}, 
+                                           { :multiple => true, :size => 5,
+                                           class: 'form-control form-width' })%>
+  <%= form.submit "Search", class: "btn btn-primary rounded-0 mt-2"  %>
+<% end %>

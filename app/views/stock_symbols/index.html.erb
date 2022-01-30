@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row mb-4">
+  <h4 class="pad col-md-6">Symbols</h4>
+  <div class="pad col-md-6"">
+      <%= link_to 'New Symbol', new_stock_symbol_path %>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% if !@symbols.blank? %>
+  <% @symbols.each do |symbol| %>
+      <tr>
+        <td><%= symbol.name%></td>
+        <td><%= link_to 'Edit', edit_stock_symbol_path(symbol) %></td>
+      </tr>
+    <% end %>
+  <% else %>
+    No Symbols Yet
+  <%end%>
+  </tbody>
+</table>
+
+<br>
+<%= will_paginate @symbols %>
+<%= link_to 'New Symbol', new_stock_symbol_path %>

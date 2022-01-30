@@ -1,0 +1,25 @@
+<%= form_for @stock_symbol do |f| %>
+  <% if @stock_symbol.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stock_symbol.errors.count, "error") %> prohibited this symbol from being saved:</h2>
+
+      <ul>
+        <% @stock_symbol.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control form-width' %>
+    <%= f.label :high_threshold %>
+  <%= f.number_field :high, autofocus: true, autocomplete: "hign", class: 'form-control form-width' %>
+    <%= f.label :low_threshold %>
+  <%= f.number_field :low, autofocus: true, autocomplete: "low", class: 'form-control form-width' %>
+  </div>
+    
+    <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-primary rounded-0 mt-2" %>
+  </div>
+<% end %>
