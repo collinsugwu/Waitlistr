@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .home {
+     overflow: hidden;
+ }
+
+ .home-btn {
+     height: 3rem;
+     font-size: 1.4rem;
+ }
+
  .pad {
     padding-left: 20px;
 }
@@ -20,3 +30,9 @@
 .form-width {
     width: 40%;
 }
+
+.info {
+    font-size: 2rem;
+    margin-top: 15rem;
+}
+
