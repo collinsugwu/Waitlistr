@@ -55,6 +55,7 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'rails-controller-testing'
 gem 'rubocop-rails', require: false
 gem 'will_paginate', '~> 3.3'
+gem 'bundler', '>= 2.0.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

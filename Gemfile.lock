@@ -282,6 +282,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bundler (>= 2.0.1)
   byebug (~> 11.1, >= 11.1.3)
   capybara
   database_cleaner
